@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>String Manipulation</title>
+    <script src="js/String-Custom-Implementation.js"></script>
+    <script src="js/String-Manipulation-User-Input.js"></script>
+</head>
+<body onload="hideInputsOnLoad()">
+    Operations :
+    <select id="selectOperation"onchange="userInputByOperation()">
+        <option id="0" value="Length">Select One</option>
+        <option id="1" value="Length">Length</option>
+        <option id="2" value="Concat">Concat</option>
+        <option id="3" value="CharAt">CharAt</option>
+        <option id="4" value="SubString">SubString</option>
+        <option id="5" value="LastIndexOf">LastIndexOf</option>
+        <option id="6" value="IndexOf">IndexOf</option>
+        <option id="7" value="Replace">Replace</option>
+    </select>
+    <br />
+    <span id="inputStringOneSpan">
+        Enter String :
+        <input type="text" id="inputStringOne"/>
+        <br />
+    </span>
+    <span id="inputStringTwoSpan">
+        <label for="inputStringTwo" id="inputStringTwoLabel"> Enter Second String :</label>
+        <input type="text" id="inputStringTwo"/>
+    </span>
+    <span id="subStringIndexSpan">
+         <label > Enter From Index :</label>
+        <input type="text" id="fromIndex"/>
+        <br />
+        <label > Enter To Index :</label>
+    <input type="text" id="toIndex"/>
+    </span>
+
+    <span id="indexOfCharSpan">
+        <label > Enter Character :</label>
+    <input type="text" id="indexOfChar"/>
+    </span>
+
+    <span id="charAtSpan">
+        <label > Enter Index :</label>
+        <input type="text" id="charAt"/>
+    </span>
+    <span id="replaceStringSpan">
+        <label > Enter String to replace :</label>
+        <input type="text" id="replaceString"/>
+        <br />
+        <label > Enter String to replace with:</label>
+        <input type="text" id="replaceStringWith"/>
+    </span>
+    <span>
+        <button type="button" onclick="submitOperation()">Submit</button>
+    </span>
+    <span>
+        <label id="output"/>
+    </span>
+</body>
+</html>
