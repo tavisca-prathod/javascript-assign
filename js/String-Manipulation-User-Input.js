@@ -1,4 +1,3 @@
-  
 var hideInputsOnLoad = function() {
 	var inputStringOneSpan = document.getElementById('inputStringOneSpan');
 	var inputStringTwoSpan = document.getElementById('inputStringTwoSpan');
@@ -15,6 +14,9 @@ var hideInputsOnLoad = function() {
 	 replaceStringSpan.hidden = true;
 	var selectOption = document.getElementById('selectOperation');
 	selectOption.required = true; 
+
+	var submitButton = document.getElementById('submitButton');
+	submitButton.addEventListener('click',submitOperation,false);
 }
 
  //<option id="1" value="Length">Length</option>
@@ -30,9 +32,9 @@ var userInputByOperation = function () {
 	var output = document.getElementById('output');
 	var inputStringOne = document.getElementById('inputStringOne');
 	var indexOfChar = document.getElementById('indexOfChar');
-	indexOfChar.value = " ";
-	inputStringOne.value = " ";
-	output.innerHTML = " ";
+	indexOfChar.value = "";
+	inputStringOne.value = "";
+	output.innerHTML = "";
 
 	switch(selectOption.selectedIndex) {
 		//Length
